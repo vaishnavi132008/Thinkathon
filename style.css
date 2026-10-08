@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+/* LOGIN */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.login-box {
+    width: 380px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #1e3c72;
+
+    margin-bottom: 8px;
+}
+
+.login-box p {
+    text-align: center;
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+
+/* FORM */
+
+label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2a5298;
+}
+
+textarea {
+    height: 100px;
+
+    resize: vertical;
+}
+
+
+/* BUTTON */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+.login-box button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px;
+
+    background: #1e3c72;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background: #2a5298;
+}
+
+#loginMessage {
+    margin-top: 15px;
+
+    color: red;
+}
+
+
+/* PORTAL */
+
+.portal {
+    display: none;
+
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+    background: #1e3c72;
+
+    color: white;
+
+    padding: 20px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    opacity: 0.8;
+}
+
+.logout-btn {
+    background: white;
+
+    color: #1e3c72;
+
+    padding: 10px 20px;
+
+    font-weight: bold;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    background: white;
+
+    padding: 15px 40px;
+
+    display: flex;
+
+    gap: 15px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav button {
+    padding: 12px 20px;
+
+    background: #e8eef8;
+
+    color: #1e3c72;
+
+    font-weight: bold;
+}
+
+nav button:hover {
+    background: #1e3c72;
+
+    color: white;
+}
+
+
+/* CONTENT */
+
+.content-section {
+    max-width: 1000px;
+
+    margin: 35px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.content-section h2 {
+    color: #1e3c72;
+
+    margin-bottom: 25px;
+}
+
+
+/* FORM GRID */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* SAVE BUTTON */
+
+.save-btn {
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    background: #1e3c72;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.save-btn:hover {
+    background: #2a5298;
+}
+
+#saveMessage {
+    margin-top: 15px;
+
+    color: green;
+
+    font-weight: bold;
+}
+
+
+/* RECORD CARD */
+
+.record-card {
+    border: 1px solid #ddd;
+
+    border-left: 5px solid #1e3c72;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    background: #fafcff;
+}
+
+.record-card h3 {
+    color: #1e3c72;
+
+    margin-bottom: 15px;
+}
+
+.record-card p {
+    margin: 8px 0;
+
+    color: #444;
+}
+
+.record-card strong {
+    color: #222;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    nav {
+        padding: 15px;
+
+        flex-direction: column;
+    }
+
+    .content-section {
+        margin: 20px;
+
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .login-box {
+        width: 90%;
+    }
+}
+
+
+CSS
