@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hostel Bus Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+    <div class="login-container" id="loginPage">
+
+        <div class="login-box">
+
+            <h1>Hostel Bus Portal</h1>
+            <p>Student Travel Management System</p>
+
+            <form id="loginForm">
+
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter username" required>
+
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+
+                <button type="submit">Login</button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN PORTAL -->
+    <div class="portal" id="portalPage">
+
+        <header>
+
+            <div>
+                <h1>Hostel Bus Portal</h1>
+                <p>Student Travel Management System</p>
+            </div>
+
+            <button class="logout-btn" onclick="logout()">Logout</button>
+
+        </header>
+
+
+        <!-- MENU -->
+        <nav>
+
+            <button onclick="showSection('addSection')">
+                Add Outing Details
+            </button>
+
+            <button onclick="showSection('recordsSection')">
+                View Records
+            </button>
+
+            <button onclick="logout()">
+                Exit
+            </button>
+
+        </nav>
+
+
+        <!-- ADD RECORD SECTION -->
+        <section id="addSection" class="content-section">
+
+            <h2>Add Outing Details</h2>
+
+            <form id="outingForm">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label>Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div>
+                        <label>Roll No</label>
+                        <input type="text" id="rollNo" required>
+                    </div>
+
+                    <div>
+                        <label>Out Date</label>
+                        <input type="date" id="outDate" required>
+                    </div>
+
+                    <div>
+                        <label>Out Time</label>
+                        <input type="time" id="outTime" required>
+                    </div>
+
+                    <div>
+                        <label>Travel Mode</label>
+
+                        <select id="travelMode" required>
+
+                            <option value="">Select Travel Mode</option>
+
+                            <option value="College Bus">
+                                College Bus
+                            </option>
+
+                            <option value="Out Bus">
+                                Out Bus
+                            </option>
+
+                            <option value="Train">
+                                Train
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+                        <label>Destination</label>
+                        <input type="text" id="destination" required>
+                    </div>
+
+                    <div class="full-width">
+
+                        <label>Purpose</label>
+
+                        <textarea
+                            id="purpose"
+                            placeholder="Enter purpose of outing"
+                            required>
+                        </textarea>
+
+                    </div>
+
+                    <div>
+                        <label>Return Date</label>
+                        <input type="date" id="returnDate" required>
+                    </div>
+
+                    <div>
+                        <label>Return Time</label>
+                        <input type="time" id="returnTime" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="save-btn">
+                    Save Details
+                </button>
+
+                <p id="saveMessage"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- VIEW RECORDS SECTION -->
+        <section id="recordsSection" class="content-section hidden">
+
+            <h2>Travel Records</h2>
+
+            <div id="recordsContainer"></div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+Html
